@@ -2,7 +2,15 @@ import express from "express"
 
 const app = express()
 
-app.get("/users", (req, res) => {
+// GET, POST, PUT, PATCH, DELETE
+
+// GET = Buscas informações
+// POST = Cadastrar informações
+// PUT = Atualizar informações de uma entidade
+// PATCH = Atualizar uma informação única de uma entidade
+// DELETE = Deletar uma informação
+
+app.post("/feedbacks", (req, res) => {
   return res.send("Hello World")
 })
 
