@@ -6,7 +6,7 @@
 4. Interface Segregation Principle
 5. Dependency Inversion Principle
 
-
+---
 
 1. Cada classe tem uma responsabilidade única
 2. As classes da aplicação devem ser abertas para extensão mas fechadas para modificação
