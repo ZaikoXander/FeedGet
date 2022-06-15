@@ -1,6 +1,6 @@
 import "react-native-gesture-handler"
 import { StatusBar } from "expo-status-bar"
-import { Dimensions, View } from "react-native"
+import { View } from "react-native"
 import * as SplashScreen from "expo-splash-screen"
 
 import { useFonts, Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter"
