@@ -18,10 +18,11 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    SplashScreen.hideAsync()
     return null
   }
-
+  
+  SplashScreen.hideAsync()
+  
   return (
     <View style={{
         flex: 1,
