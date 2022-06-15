@@ -1,16 +1,15 @@
+import { useRef } from "react"
 import { TouchableOpacity } from "react-native"
 import { ChatTeardropDots } from "phosphor-react-native"
-
+import BottomSheet from "@gorhom/bottom-sheet"
 import { gestureHandlerRootHOC } from "react-native-gesture-handler"
+
+import { Options } from "../Options"
+import { Form } from "../Form"
+import { feedbackTypes } from "../../utils/feedbackTypes"
 
 import { styles } from "./styles"
 import { theme } from "../../theme"
-
-import { feedbackTypes } from "../../utils/feedbackTypes"
-import { Form } from "../Form"
-import { useRef } from "react"
-import BottomSheet from "@gorhom/bottom-sheet"
-
 
 export type FeedbackType = keyof typeof feedbackTypes
 

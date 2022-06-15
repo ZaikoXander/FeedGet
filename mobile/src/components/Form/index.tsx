@@ -1,11 +1,15 @@
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { Image, Text, TouchableOpacity, View } from "react-native"
+import { BottomSheetTextInput } from "@gorhom/bottom-sheet"
 
 import { ArrowLeft } from "phosphor-react-native"
 
-import { styles } from "./styles"
-import { theme } from "../../theme"
 import { FeedbackType } from "../Widget"
 import { feedbackTypes } from "../../utils/feedbackTypes"
+import { ScreenshotButton } from "../ScreenshotButton"
+
+import { styles } from "./styles"
+import { theme } from "../../theme"
+import { Button } from "../Button"
 
 interface Props {
   feedbackType: FeedbackType
@@ -21,7 +25,7 @@ export function Form({ feedbackType }: Props) {
           <ArrowLeft
             size={24}
             weight="bold"
-            color={theme.colors.surface_secondary}
+            color={theme.colors.text_secondary}
           />
         </TouchableOpacity>
 
@@ -36,12 +40,23 @@ export function Form({ feedbackType }: Props) {
         </View>
       </View>
 
-      <TextInput
+      <BottomSheetTextInput
         multiline
         style={styles.input}
         placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
         placeholderTextColor={theme.colors.text_secondary}
       />
+
+      <View style={styles.footer}>
+        <ScreenshotButton
+          onTakeShot={() => {}}
+          onRemoveShot={() => {}}
+          screenshot=""
+        />
+        <Button
+          isLoading={false}
+        />
+      </View>
 
     </View>
   )

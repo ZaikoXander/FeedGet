@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
   },
 
   input: {
+    alignSelf: "stretch",
     height: 112,
     padding: 12,
     marginBottom: 8,
@@ -40,6 +41,11 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.stroke,
     color: theme.colors.text_primary,
-    fontFamily: theme.fonts.regular
+    fontFamily: theme.fonts.regular,
+  },
+
+  footer: {
+    flexDirection: "row",
+    marginBottom: 16,
   }
 })
